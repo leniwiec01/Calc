@@ -3,14 +3,15 @@ using ProgramTexts;
 
 namespace Calculator
 {
-    class CalculatorUi
+    public class CalculatorUi
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+
             bool endApp = false;
             Console.WriteLine(ProgramText.Title);
             Console.WriteLine("-------------------------------------\n");
-            while(!endApp)
+            while (!endApp)
             {
                 string numInput1 = "";
                 string numInput2 = "";
@@ -47,7 +48,9 @@ namespace Calculator
 
                 try
                 {
-                    result = CalculatorLogic.DoOperation(cleanNum1, cleanNum2, op);
+                    var logic = new Calculator.CalculatorLogic();
+                    result = logic.DoOperation(cleanNum1, cleanNum2, op);
+                    //result = new CalculatorLogic.DoOperation(cleanNum1, cleanNum2, op);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine(ProgramText.ErrorWarning);

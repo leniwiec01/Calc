@@ -1,10 +1,11 @@
 ﻿using System;
 
+
 namespace Calculator
 {
-    class CalculatorLogic
+    public class CalculatorLogic
     {
-        public static double DoOperation(double num1, double num2, string op)
+        public double DoOperation(double num1, double num2, string op)
         {
             double result = double.NaN;
 
