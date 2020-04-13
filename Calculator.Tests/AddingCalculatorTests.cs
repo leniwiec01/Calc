@@ -1,7 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit;
-
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
+using NUnit.Framework;
+using Assert = NUnit.Framework.Assert;
 
 namespace Calculator.UnitTests
 {
@@ -11,9 +11,9 @@ namespace Calculator.UnitTests
         [TestMethod]
         public void PositiveAddAction()
         {
-            var calc = new Calculator.CalculatorLogic();
-            var sum = calc.DoOperation(2, 2, "+");
-            Assert.AreEqual(4, sum);
+            var logicMethod = new Calculator.CalculatorLogic();
+            var addAction = logicMethod.DoOperation(2, 2, "+");
+            Assert.AreEqual(4, addAction);
         }
     }
 }
