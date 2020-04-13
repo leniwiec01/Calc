@@ -9,7 +9,7 @@ namespace Calculator
         {
             bool endApp = false;
             Console.WriteLine(ProgramText.Title);
-            Console.WriteLine("------------------------\n");
+            Console.WriteLine("-------------------------------------\n");
             while(!endApp)
             {
                 string numInput1 = "";
